@@ -1,0 +1,1 @@
+Error! column of first matrix not equal to row of second.
