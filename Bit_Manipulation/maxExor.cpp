@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 
-int maxxor (int x,int y){
-    int maxExor = 0,n=2;
-	for(int i = x;i<=y;++i) {
-		for(int j = i+1;j<=y;++j) {
+long maxxor (long x,long y){
+    long maxExor = 0,n=2;
+	for(long i = x;i<=y;++i) {
+		for(long j = i+1;j<=y;++j) {
 			maxExor = max(maxExor,i^j);
 		}
 	}
@@ -12,9 +12,9 @@ int maxxor (int x,int y){
 	return maxExor;
 }
 int main () {
-	int x,y;
+	long x,y;
 	cin>>x>>y;
-	int maxExor = maxxor(x,y);
+	long maxExor = maxxor(x,y);
 	cout<<maxExor;
 	return 0;
 }
