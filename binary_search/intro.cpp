@@ -19,6 +19,12 @@ int binary_search(int arr[],int n,int number) {
           start = mid+1;
         } 
     }
+    if(start>end){
+            if(arr[end]<number)
+                return start;
+            else 
+                return end;
+        }
     return -1;
 }
 int main() {
