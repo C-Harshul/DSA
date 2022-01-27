@@ -27,4 +27,5 @@ int main()
     int n;
     cin >> n;
     printSpellings(n);
+    return 0;
 }

@@ -3,9 +3,8 @@ using namespace std;
 
 int strintoInt(string s,int n,int i = 1){
     int ans = 0;
-    if(n == 0){
-        ans += (i * (s[n]-'0'));
-        return ans;
+    if(n == -1){
+        return 0 ;
     }
     ans = strintoInt(s,n-1,i*10);
     ans += (i * (s[n]-'0'));
