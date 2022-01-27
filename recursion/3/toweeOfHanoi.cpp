@@ -16,4 +16,4 @@ int main(){
     cin>>n; 
     move(n,'A','B','C');
     return 0;
-} 
+}  

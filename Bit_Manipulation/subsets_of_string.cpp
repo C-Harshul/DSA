@@ -33,7 +33,7 @@ void printSubsets(char a[])
 
 int main()
 {
-
+ 
     char a[100];
 
     cin >> a;
