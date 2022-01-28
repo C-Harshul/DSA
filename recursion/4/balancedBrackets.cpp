@@ -14,7 +14,7 @@ void balancedBracket(int o, int c, char *s, int n, int i = 0)
     }
     if (o < c)
     {
-        if (c > 0)
+        if (c > 0) 
         {
 
             s[i] = ')';
