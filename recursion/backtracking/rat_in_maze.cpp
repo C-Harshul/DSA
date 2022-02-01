@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-bool ratInMaze(char maze[10][10],int soln[][10],int i,int j,int m,int n){
+bool ratInMaze(char maze[1000][1000],int soln[][10],int i,int j,int m,int n){
      if(i==m && j==n){
          soln[m][n] = 1;
          //Print
@@ -24,8 +24,13 @@ bool ratInMaze(char maze[10][10],int soln[][10],int i,int j,int m,int n){
      }
      // Assuming solution exists through current cell
     soln[i][j] = 1;
-    bool rightSuccess = ratInMaze(maze,soln,i+1,j,m,n);
-    bool downSuccess = ratInMaze(maze,soln,i,j+1,m,n);
+	bool downSuccess = ratInMaze(maze,soln,i,j+1,m,n);
+    if(downSuccess)
+    return true;
+ 	bool rightSuccess = ratInMaze(maze,soln,i+1,j,m,n);
+    if(rightSuccess)
+    return true;
+    
     //Backtracking 
     soln[i][j] = 0;
     if(rightSuccess || downSuccess) {
@@ -35,13 +40,15 @@ bool ratInMaze(char maze[10][10],int soln[][10],int i,int j,int m,int n){
 }
 
 int main(){
-    char maze[10][10] = {
-        "0000",
-        "00X0",
-        "000X",
-        "0X00"
-    };
+    int a,b;
+	cin>>a>>b;
+	char maze[1000][1000];
+	for(int i = 0;i<a;++i){
+		for(int j=0;j<b;++j){
+			cin>>maze[i][j];
+		}
+	}
     int soln[10][10] = {0};
-    ratInMaze(maze,soln,0,0,3,3);
+    ratInMaze(maze,soln,0,0,a-1,b-1);
     return 0;
 }
