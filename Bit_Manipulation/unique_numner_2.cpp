@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+// Program to find the 2 unique numbers
 int main(){
 
     int n, exor = 0,in[100000];
@@ -21,6 +21,7 @@ int main(){
     int x=0;
     int y = 0;
     int mask = 1<<pos;
+    cout<<mask<<endl;
     for(int i = 0;i<n;++i){
         if((in[i]&mask)>0){
             x = x^in[i];
