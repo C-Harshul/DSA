@@ -1,2 +1,2 @@
-print(head);
-    // deleteHead(head);
+
+    // cout<<head;
