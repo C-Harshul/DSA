@@ -19,6 +19,7 @@ public:
     }
     void enqueue(char c)
     {
+        int displacements = 0;
         if (front == -1)
         {
             arr[++front] = c;
@@ -36,10 +37,12 @@ public:
             for (int i = front; i >= pos; --i)
             {
                 arr[i + 1] = arr[i];
+                displacements++;
             }
             arr[pos] = c;
             front++;
         }
+        cout<<displacements<<endl;
     }
     void dequeue()
     {
@@ -59,9 +62,13 @@ int main()
 {
     Queue a;
     a.enqueue('A');
+    a.Print();
     a.enqueue('N');
+    a.Print();
     a.enqueue('F');
+    a.Print();
     a.enqueue('Z');
+    a.Print();
     a.enqueue('B');
     a.Print();
     a.dequeue();

@@ -208,6 +208,7 @@ Node* reverseRecursively2(Node*&head,Node*&prev){
     }
     Node *temp = reverseRecursively2(head->next,head);
     head->next = prev;
+    head = temp;
     return temp;
 }
 
@@ -250,26 +251,28 @@ int kthNodeFromend (Node*head,int k){
 }
 
 int main(){
-    Node*head;
-    cin>>head;
+    Node*head = NULL;
+    // cin>>head;
     // print(head);
     // reverseLinkedList(head);
     // cout<<head;
-    // Node *p = NULL;
+    Node *p = NULL;
     // head = reverseRecursively2(head,p);
     // cout<<head;
     // head = reverseRecursively3(head);
     // cout<<head;
     //cout<<runnerMidPoint(head);
-    cout<<kthNodeFromend(head,2);
+    // cout<<kthNodeFromend(head,2);
     // insertAtHead(head,3);
     // insertAtHead(head,7);
     // insertInMiddle(head,2,15);
-    // //print(head);
-    // insertAtHead(head,1);
-    // insertAtTail(head,12);
-    // insertAtTail(head,44);
-    // // print(head);
+    //print(head);
+    insertAtHead(head,1);
+    insertAtTail(head,12);
+    insertAtTail(head,44);
+    print(head);
+    reverseRecursively2(head,p);
+    print(head);
     // // deleteHead(head);
     // print(head);
     // deleteMiddle(head,3);
