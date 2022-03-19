@@ -109,7 +109,7 @@ void deleteMiddle(Node*&head,int p){
         deleteHead(head);
     } else if(p>=length(head)-1){
         deleteTail(head);
-    }else {
+    } else {
 
     int jump = 1;
     Node *t = head;

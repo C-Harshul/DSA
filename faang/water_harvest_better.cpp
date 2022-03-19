@@ -1,5 +1,3 @@
-// Store the right max and left max at each index in different arrays and compare the max between the left elements left max and right element's right max
-
 #include <iostream>
 using namespace std;
 int a[1000000], l[1000000], r[1000000];
@@ -14,12 +12,10 @@ int main()
     l[0] = a[0];
     r[n - 1] = a[n - 1];
     int leftmax = 0, rightmax = 0;
-    //Pre computing the left max array
     for (i = 1; i < n; i++)
     {
         l[i] = max(l[i - 1], a[i]);
     }
-    //Pre computing the right max array
     for (i = n - 2; i >= 0; i--)
     {
         r[i] = max(r[i + 1], a[i]);
