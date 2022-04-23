@@ -11,9 +11,7 @@ void heapify(int a[], int n, int i)
         largest = right; 
     if (largest != i)
     {
-        int temp = a[i];
-        a[i] = a[largest];
-        a[largest] = temp;
+        swap(a[i],a[largest]);
         heapify(a, n, largest);
     }
 }
@@ -23,9 +21,7 @@ void heapSort(int a[], int n)
         heapify(a, n, i);
     for (int i = n - 1; i >= 0; i--)
     {
-        int temp = a[0];
-        a[0] = a[i];
-        a[i] = temp;
+        swap(a[0],a[i]);
         heapify(a, i, 0);
     }
 } 
